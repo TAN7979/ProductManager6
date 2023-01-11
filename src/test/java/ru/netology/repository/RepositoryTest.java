@@ -7,15 +7,17 @@ import ru.netology.product.Product;
 import ru.netology.product.Smartphone;
 
 public class RepositoryTest {
+
+    Repository repo = new Repository();
+    Smartphone smart1 = new Smartphone(1, "Sony 1", 11, "Sony");
+    Smartphone smart2 = new Smartphone(2, "LG 2", 21, "LG");
+    Smartphone smart3 = new Smartphone(3, "HP 3", 31, "HP");
+    Book book4 = new Book(4, "masks", 41, "Metelsky");
+    Book book5 = new Book(5, "witchery", 51, "Vasiliev");
+    Book book6 = new Book(6, "legacy", 61, "Tarmyshev");
     @Test
     public void checkRemoveByIdSmart() {
-        Repository repo = new Repository();
-        Smartphone smart1 = new Smartphone(1, "Sony 1", 11, "Sony");
-        Smartphone smart2 = new Smartphone(2, "LG 2", 21, "LG");
-        Smartphone smart3 = new Smartphone(3, "HP 3", 31, "HP");
-        Book book4 = new Book(4, "masks", 41, "Metelsky");
-        Book book5 = new Book(5, "witchery", 51, "Vasiliev");
-        Book book6 = new Book(6, "legacy", 61, "Tarmyshev");
+
         repo.save(smart1);
         repo.save(smart2);
         repo.save(smart3);
@@ -30,13 +32,7 @@ public class RepositoryTest {
     }
     @Test
     public void checkRemoveByIdBook() {
-        Repository repo = new Repository();
-        Smartphone smart1 = new Smartphone(1, "Sony 1", 11, "Sony");
-        Smartphone smart2 = new Smartphone(2, "LG 2", 21, "LG");
-        Smartphone smart3 = new Smartphone(3, "HP 3", 31, "HP");
-        Book book4 = new Book(4, "masks", 41, "Metelsky");
-        Book book5 = new Book(5, "witchery", 51, "Vasiliev");
-        Book book6 = new Book(6, "legacy", 61, "Tarmyshev");
+
         repo.save(smart1);
         repo.save(smart2);
         repo.save(smart3);
