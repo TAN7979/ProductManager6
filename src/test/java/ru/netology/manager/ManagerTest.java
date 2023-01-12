@@ -18,7 +18,7 @@ public class ManagerTest {
 
 
     @Test
-    public void searchInAnArraySmart() {
+    public void searchInAnArraySmart() {// удаление по ID Smart
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
@@ -35,7 +35,7 @@ public class ManagerTest {
     }
 
     @Test
-    public void searchInAnArrayBook() {
+    public void searchInAnArrayBook() {// удаление по ID Book
         Repository repo = new Repository();
         Manager manager = new Manager(repo);
 
@@ -49,6 +49,23 @@ public class ManagerTest {
         Product[] expected = {book4};
         Product[] actual = manager.searchBy("masks");
         Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void checkMatches() {
+        Repository repo = new Repository();
+        Manager manager = new Manager(repo);
+
+        manager.add(smart1);
+        manager.add(smart2);
+        manager.add(smart3);
+        manager.add(book4);
+        manager.add(book5);
+        manager.add(book6);
+        manager.matches(smart3, "HP");
+
+        boolean expected = true;
+        boolean actual = manager.matches(smart3, "HP");
+        Assertions.assertEquals(expected, actual);
     }
 
 }

@@ -31,10 +31,10 @@ public class ProductTest {
     @Test
     public void changePrice() {
         Product product = new Product(2, "LG 2", 21);
-        product.setId(44);
+        product.setPrice(44);
 
         int expected = 44;
-        int actual = product.getId();
+        int actual = product.getPrice();
         Assertions.assertEquals(expected, actual);
 
     }
