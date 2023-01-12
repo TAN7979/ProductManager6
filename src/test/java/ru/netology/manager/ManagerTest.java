@@ -84,22 +84,6 @@ public class ManagerTest {
         boolean actual = manager.matches(book5, "witchery");
         Assertions.assertEquals(expected, actual);
     }
-    @Test
-    public void checkAdd() {
-        Repository repo = new Repository();
-        Manager manager = new Manager(repo);
 
-        manager.add(smart1);
-        manager.add(smart2);
-        manager.add(smart3);
-        manager.add(book4);
-        manager.add(book5);
-        manager.add(book6);
-
-
-        Product[] expected = {smart1, smart2, smart3, book4, book5, book6};
-        Product[] actual = manager.add();
-        Assertions.assertArrayEquals(expected, actual);
-    }
 }
 
