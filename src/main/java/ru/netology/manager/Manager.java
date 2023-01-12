@@ -7,7 +7,7 @@ public class Manager {
 
     private Repository repo;// добавли репозиторий
 
-    public Manager(Repository repo) {//метод
+    public Manager(Repository repo) {//конструктор
         this.repo = repo; //объект метод которого используем
     }
 
@@ -30,14 +30,13 @@ public class Manager {
         }
         return result;
     }
-    public boolean matches(Product product, String search) { // метод определения соответствия товара product запросу
+    public boolean matches(Product product, String search) { // метод определения соответствия товара запросу
         if (product.getName().contains(search)) {
             return true;
         } else {
             return false;
         }
     }
-
 
 }
 
