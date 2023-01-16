@@ -87,18 +87,6 @@ public class ManagerTest {
     }
 
 
-        manager.add(smart1);
-        manager.add(smart2);
-        manager.add(smart3);
-        manager.add(book4);
-        manager.add(book5);
-        manager.add(book6);
-        manager.matches(book5, "witchery");
-
-        boolean expected = true;
-        boolean actual = manager.matches(book5, "witchery");
-        Assertions.assertEquals(expected, actual);
-    }
     @Test
     public void checkAdd() {
         Repository repo = new Repository();
